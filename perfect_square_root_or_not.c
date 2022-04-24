@@ -2,12 +2,12 @@
 #include<math.h>
 int main()
 {
-    int n,v;
-    float i;
+    int i,n;
+    float m;
     scanf("%d",&n);
-    i=sqrt(n);
-    v=i;
-    if(v==i)
+    m=sqrt((double)n);
+    i=m;
+    if(m==i)
     {
         printf("True");
     }
@@ -16,4 +16,5 @@ int main()
         printf("False");
     }
     return 0;
+    
 }
