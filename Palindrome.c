@@ -10,12 +10,14 @@ int main()
         sum=sum*10+temp;
         n=n/10;
     }
-    if(m==sum)
+    if(sum==m)
     {
         printf("True");
     }
-    else{
+    else
+    {
         printf("False");
     }
     return 0;
+    
 }
