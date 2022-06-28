@@ -2,22 +2,22 @@
 #include<math.h>
 int main()
 {
-    int n,sum=0,temp,s;
+    int n,s,t,sum=0;
     scanf("%d",&n);
     s=n*n;
     while(s>0)
     {
-        temp=s%10;
-        sum=sum+temp;
+        t=s%10;
+        sum=sum+t;
         s=s/10;
     }
     if(sum==n)
     {
         printf("Neon Number");
+        
     }
     else
     {
         printf("Not Neon Number");
     }
-    return 0;
 }
