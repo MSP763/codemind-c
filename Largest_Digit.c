@@ -1,17 +1,29 @@
 #include<stdio.h>
 int main()
 {
-    int n,larg=0,temp=0;
-    scanf("%d",&n);
-    while(n>0)
+    int num,l,m,n,o;
+    scanf("%d",&num);
+    l=num%10;
+    num=num/10;
+    m=num%10;
+    num=num/10;
+    n=num%10;
+    o=num/10;
+    if(o>l && o>m && o>n)
     {
-        temp=n%10;
-        if(temp>larg)
-        {
-            larg=temp;
-        }
-        n=n/10;
+    printf("%d",o);
     }
-    printf("%d",larg);
+    else if (n>l && n>m && n>o)
+    {
+        printf("%d",n);
+    }
+    else if (m>l && m>n && m>o)
+    {
+        printf("%d",m);
+    }
+    else
+    {
+        printf("%d",l);
+    }
     return 0;
 }
