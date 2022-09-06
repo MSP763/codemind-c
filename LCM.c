@@ -1,17 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int m,n,max,lcm,i;
-    scanf("%d%d",&m,&n);
-    max=m>n?m:n;
-    lcm=max;
-    for(i=max;;i=i+max)
+    int a,b,lcm,fac=1;
+    scanf("%d%d",&a,&b);
+    lcm=(a>b) ? a:b;
+    while(fac)
     {
-        if(i%m==0&&i%n==0)
+        if(lcm%a==0 && lcm%b==0)
         {
-            lcm=i;
-            break;
+            printf("%d",lcm);
+            fac=0;
         }
+        lcm++;
     }
-    printf("%d",lcm);
+    
+    
 }
