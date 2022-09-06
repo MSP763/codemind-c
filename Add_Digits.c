@@ -1,27 +1,25 @@
-#include <stdio.h>
-int calculateDigits(int num)
-{
-	int sum=0;
-	while(num!=0)
-	{
-		sum+=(num%10);
-		num/=10;
-	}
-	if(sum>=10)
-		calculateDigits(sum);
-	else
-		return sum;
-}
+#include<stdio.h> 
+
 int main()
-{
-	int n,sum;
-	scanf("%d",&n);
-	if(n<0)
-	{
-		return -1;
-	}
-	sum=calculateDigits(n);
-	printf("%d",sum);
-	
-	return 0;
+{    
+    
+    int n,sum = 0,rem;
+    scanf("%d",&n);   
+
+    while(n/10 != 0)
+    {
+        sum = 0;
+        while(n!= 0) 
+        {
+            rem = n% 10;  
+            sum += rem; 
+            n = n/ 10;  
+        }
+
+        n = sum;
+    }
+
+    printf("%d", sum);
+
+    return 0;
 }
